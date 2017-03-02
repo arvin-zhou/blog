@@ -1,0 +1,18 @@
+@charset "utf-8";
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form{margin:0}
+body,button,input,select,textarea{font:12px/1.5 '\5FAE\8F6F\96C5\9ED1',tahoma,sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em,b{font-style:normal}
+a{text-decoration:none;outline: none;}
+a:hover{text-decoration:none}
+img{border:0}
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+td,th,ul,ol{padding:0}
+ul,ol,dl,li{list-style:none;}
+table,tr,td{margin: 0;padding: 0;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{*zoom:1;}
+.fl {float: left}
+.fr {float: right}
+.hide{display: none}
