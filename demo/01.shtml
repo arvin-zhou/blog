@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>123</title>
-	<!--#include virtual="/includes/header.html" -->
+	<!--#include virtual="../header.html" -->
 </head>
 <body>
 	test
