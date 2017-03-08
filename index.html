@@ -125,13 +125,41 @@
 		<span>TOP</span>
 		<img class="l" src="img/music.png" alt="music">
 		<!-- <input type="text" class="l 001"> -->
-		<img class="r" src="img/more.png" alt="more">
+		<img class="r" src="img/more.png" alt="more" id="updateList">
 		<span class="l prev">PREV</span>
 		<!-- <input type="text" class="r 002"> -->
 		<!-- <input type="text" class="r 003"> -->
 
-		<span class="r next" >NEXT</span>
+		<span class="r next">NEXT</span>
 	</div>
 </div>
+<script>
+	　$(document).ready(function() {
+            jQuery("#updateList").click(function() {
+                jQuery.ajax({
+                    url: "data.json",
+                    type: "post",
+                    data: { id: '0' },
+                    dataType: "json",
+                    success: function(msg) {
+                        console.log(msg[0].date);
+                  
+                        date=msg[0].date.replace(/-/g,'');
+                 		console.log(date)
+
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                    complete: function(XMLHttpRequest, textStatus) {
+                    	console.log('完成'+this);
+                        // 调用本次AJAX请求时传递的options参数
+                    }
+                });
+            });
+        });
+</script>
 </body>
 </html>
